@@ -24,6 +24,7 @@ spend,
 impressions,
 link_clicks,
 add_to_cart,
+initiate_checkout,
 purchases,
 revenue
 FROM {{ ref('facebook_performance_by_ad') }}
