@@ -3,6 +3,7 @@
 )}}
 
 SELECT 
+account_id,
 campaign_name,
 campaign_id,
 campaign_effective_status,
