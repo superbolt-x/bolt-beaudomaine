@@ -40,3 +40,6 @@ packages:
     
   - git: "https://github.com/superbolt-x/bolt-dbt-reddit-package.git"
     revision: main
+
+  - git: "https://github.com/superbolt-x/bolt-dbt-shopify-package-eu.git"
+    revision: main
