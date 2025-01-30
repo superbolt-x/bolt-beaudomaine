@@ -23,6 +23,7 @@ vars:
     # General vars
     week_start: 'Monday' # Abbreviation and full name both work
     currency: "USD"
+    sho_eu_currency: "USD"
 
     # Googleads vars
     googleads_conversion_used_by_custom_conversions: 'all_conversions'   # Googleads custom conversions can use conversions or all_conversions
