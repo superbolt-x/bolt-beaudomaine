@@ -3,7 +3,7 @@ packages:
     revision: main
     
   - git: "https://github.com/superbolt-x/bolt-dbt-facebook-package.git"
-    revision: main
+    revision: transformations-grouping
 
   - git: "https://github.com/superbolt-x/bolt-dbt-googleads-package.git"
     revision: main
