@@ -18,3 +18,4 @@ initiate_checkout,
 purchases,
 revenue
 FROM {{ ref('facebook_performance_by_campaign') }}
+WHERE campaign_name ~* 'SB'
