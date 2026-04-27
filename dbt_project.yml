@@ -29,7 +29,9 @@ vars:
 
     # Shopify vars
     time_zone: 'US/Eastern'
+    sales_channel_exclusion: 'dummy' # exclude orders that came from certain sales channels from analytics e.g. 'channel1|channel2'
     sales_channel_inclusion: 'web|subscription_contract|subscription_contract_checkout_one|3890849' # include orders that came from certain sales channels from analytics e.g. 'channel1|channel2'
+    shipping_countries_excluded: 'dummy' # include only orders which shipping country is in the list e.g. 'FR|BE', except if value 'dummy' is left 
     shipping_countries_included: 'US' # include only orders which shipping country is in the list e.g. 'US|CA', except if value 'dummy' is left 
 
 models:
