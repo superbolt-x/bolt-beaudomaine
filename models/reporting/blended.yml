@@ -1,1 +1,39 @@
 version: 2
+
+sources: 
+
+- name: utilities
+  schema: utilities
+  tables:
+    - name: dates
+      identifier: dates
+      
+- name: ga4_raw
+  schema: ga4_raw
+  tables:
+    - name: traffic_sources_session
+      identifier: traffic_sources_session
+
+- name: gsheet_raw
+  schema: gsheet_raw
+  tables:
+    - name: epsilon_spend
+      identifier: epsilon_spend
+
+- name: reporting
+  schema: reporting
+  tables:
+    - name: facebook_ad_performance
+      identifier: beaudomaine_facebook_ad_performance
+
+    - name: facebook_campaign_performance
+      identifier: beaudomaine_facebook_campaign_performance
+
+    - name: googleads_campaign_performance
+      identifier: beaudomaine_googleads_campaign_performance
+
+    - name: shopify_sales
+      identifier: beaudomaine_shopify_sales
+
+    - name: ga4_campaign_performance_session
+      identifier: beaudomaine_ga4_performance_by_campaign_session
