@@ -52,7 +52,9 @@ paid_data as
 
 ga4_data as 
     (SELECT case 
-              when source_medium = '' then '2026' else campaign_id::varchar 
+              when source_medium = 'epsilon / display' then '2026' 
+			  when source_medium in ('ig / cpc','fb / cpc','th / cpc') then split_part(campaign_id,'_',1)::varchar
+			  else campaign_id::varchar 
             end as campaign_id, date, date_granularity, 
     sum(sessions) as sessions, sum(engaged_sessions) as engaged_sessions
     FROM {{ source('reporting','ga4_campaign_performance_session') }}
