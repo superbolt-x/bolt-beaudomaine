@@ -29,9 +29,9 @@ paid_data as
     (SELECT channel, campaign_id::varchar as campaign_id, campaign_name, date::date, date_granularity, COALESCE(SUM(spend),0) as spend, COALESCE(SUM(clicks),0) as clicks, 
         COALESCE(SUM(impressions),0) as impressions, COALESCE(SUM(paid_purchases),0) as paid_purchases, COALESCE(SUM(paid_revenue),0) as paid_revenue
     FROM
-        (SELECT 'Meta' as channel, campaign_id::varchar as campaign_id, campaign_name, date, date_granularity, 
+        (SELECT 'Meta' as channel, adset_id::varchar as campaign_id, campaign_name, date, date_granularity, 
             spend, link_clicks as clicks, impressions, purchases as paid_purchases, revenue as paid_revenue
-        FROM {{ source('reporting','facebook_campaign_performance') }}
+        FROM {{ source('reporting','facebook_ad_performance') }}
         UNION ALL
         SELECT 'Google Ads' as channel, campaign_id::varchar as campaign_id, campaign_name, date, date_granularity,
             spend, clicks, impressions, purchases as paid_purchases, revenue as paid_revenue
