@@ -58,6 +58,7 @@ ga4_data as
             end as campaign_id, date, date_granularity, 
     sum(sessions) as sessions, sum(engaged_sessions) as engaged_sessions
     FROM {{ source('reporting','ga4_campaign_performance_session') }}
+	WHERE profile = 396968902
     GROUP BY 1,2,3),
 
 paid_ga4_data as (
