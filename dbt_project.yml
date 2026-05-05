@@ -34,6 +34,7 @@ vars:
     shipping_countries_excluded: 'dummy' # exclude only orders which shipping country is in the list e.g. 'FR|BE', except if value 'dummy' is left 
     shipping_countries_included: 'US' # include only orders which shipping country is in the list e.g. 'US|CA', except if value 'dummy' is left 
     financial_status: 'paid' # include orders with a specific financial status, except if value 'dummy' is left
+    canceled_orders: 'included' # include/exclude canceled orders
 
 models:
   bolt_blueprint:
