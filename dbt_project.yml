@@ -31,18 +31,17 @@ vars:
     time_zone: 'US/Eastern'
     sales_channel_exclusion: 'dummy' # exclude orders that came from certain sales channels from analytics e.g. 'channel1|channel2'
     sales_channel_inclusion: 'web|subscription_contract|subscription_contract_checkout_one|3890849' # include orders that came from certain sales channels from analytics e.g. 'channel1|channel2'
-    shipping_countries_excluded: 'dummy' # exclude only orders which shipping country is in the list e.g. 'FR|BE', except if value 'dummy' is left 
-    shipping_countries_included: 'US' # include only orders which shipping country is in the list e.g. 'US|CA', except if value 'dummy' is left 
+    shipping_countries_excluded: 'dummy' # exclude only orders which shipping country is in the list e.g. 'FR|BE', except if value 'dummy' is left
+    shipping_countries_included: 'US' # include only orders which shipping country is in the list e.g. 'US|CA', except if value 'dummy' is left
     financial_status: 'paid' # include orders with a specific financial status, except if value 'dummy' is left
     canceled_orders: 'included' # include/exclude canceled orders
-    sho_eu_currency: 'EUR' # moneda nativa del store EU/Francia - deja inactivo el branch de reconversion de moneda (mismo comportamiento que UK)
 
 models:
   bolt_blueprint:
     base:
       +schema: base
       +materialized: table
-      
+
     reporting:
       +schema: reporting
       +materialized: table
