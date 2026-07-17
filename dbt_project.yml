@@ -35,6 +35,7 @@ vars:
     shipping_countries_included: 'US' # include only orders which shipping country is in the list e.g. 'US|CA', except if value 'dummy' is left 
     financial_status: 'paid' # include orders with a specific financial status, except if value 'dummy' is left
     canceled_orders: 'included' # include/exclude canceled orders
+    sho_eu_currency: 'EUR' # moneda nativa del store EU/Francia - deja inactivo el branch de reconversion de moneda (mismo comportamiento que UK)
 
 models:
   bolt_blueprint:
